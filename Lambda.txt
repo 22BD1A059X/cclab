@@ -1,0 +1,11 @@
+Lambda:
+function -> create function -> RUntime env(Python 3.9) -> Architecture 86_64 -> Role -> existing(labrole) ->create
+then select function -> actions -> view details -> configuration -> function url -> auth type ->AWS_IAM save
+to test we need event
+event -> test -> name -> private save
+paste the code
+Bucket -> create bucket -> block all public access
+DynamoDB -> create Table -> new table -> partition key (unique)
+in lambda add trigger -> config ->s3 -> bucket(our bucket) -> event types(include all) save 
+now if you add anything in the bucket it will show in dynamodb table
+in the lambda code we have to change the name of the table or we have to change the name in code
