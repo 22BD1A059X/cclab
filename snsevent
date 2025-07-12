@@ -8,10 +8,10 @@
         "Service": "s3.amazonaws.com"
       },
       "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:eu-north-1:805791260155:SMS-MSG59X",
+      "Resource": "arn:aws:sns:eu-north-1:805791260155:SMS-MSG59X", // sms arn
       "Condition": {
         "ArnLike": {
-          "AWS:SourceArn": "arn:aws:s3:::sms59x"
+          "AWS:SourceArn": "arn:aws:s3:::sms59x" // in place od sms59x bucketname
         }
       }
     }
