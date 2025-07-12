@@ -1,0 +1,21 @@
+dockerdeploymenet
+in GitHub add portfolio.html
+launch ec2 instance
+sudo su
+yum update -y
+yum install git -y
+git -version
+git clone https://github.com/22BD1A059X/cclab.git
+ls
+cd cclab
+docker -y
+sudo systemctl start docker 
+sudo systemctl enable docker
+nanao dockerfile
+    FROM nginx:alpine 
+    COPY portfolio.html /usr/share/nginx/html/index.html
+Ctrl S->ctrl X to come out
+docker build -t portfolio . 
+docker images
+sudo docker run -d -p 80:80 portfolio
+docker ps -a
