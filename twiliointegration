@@ -1,0 +1,12 @@
+sign up twilio
+navigate to sandbox activate it
+lex->
+in version create version
+create alias -> name
+under associated alias associate with version
+channel integration
+add channel -> twilio SMS -> in twilio copy sid and password
+->additional configuration paste
+copy callback url
+in twilio go to sandbox tab and then setting give url or scan QR
+you will get chatbot in whatsapp
