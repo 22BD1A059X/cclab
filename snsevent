@@ -1,0 +1,19 @@
+{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowS3ToPublish",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:eu-north-1:805791260155:SMS-MSG59X",
+      "Condition": {
+        "ArnLike": {
+          "AWS:SourceArn": "arn:aws:s3:::sms59x"
+        }
+      }
+    }
+  ]
+}
