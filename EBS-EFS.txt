@@ -1,0 +1,51 @@
+EBS mounting and persist
+sudo su
+lsblk
+fdisk l
+fdisk /dev/xvdb m n p default default w
+patprobe
+lsblk -fs
+mkfs.fs /dev/xvdb1
+lsblk -fs
+mkdir /mnt/CSE9x
+mount /dev/xvdb1 /mnt/CSE9x
+cd /mnt/CSE9x
+touch file1
+ls
+cd /
+PERSIST
+vi /etc/fstab
+i 
+Defaultclick
+/dev/xvdb1 /mnt/CSE9x xfs defaults 0 0
+esc
+:wq
+cd /mnt/CSE9x
+ls
+cd /
+umount /mnt/CSE9x
+it will unmount 
+to again mount
+mount -a
+
+EFS
+create two instances efs-1 and efs-2 with security groups efs in two different regions
+efs -> create file system name filesharing
+select filesharing-> view details -> network -> select efs-nfs security groups we created to the regions we created instances
+now copy the domain command to paste in two cmds of instances
+
+first connect two instances
+sudo su
+mkdir efs
+yum install -y amazon-efs-util
+Now paste the domain command
+if we create a file in efs-1 we can see in efs-2
+
+
+
+
+
+
+
+
+
