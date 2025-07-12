@@ -41,6 +41,16 @@ yum install -y amazon-efs-util
 Now paste the domain command
 if we create a file in efs-1 we can see in efs-2
 
+For snapshot
+cretae snapshot from volume
+then copy the snapshot to specific region
+after that create volume from snapshot
+now create a ec2 instance attach the volume to it
+Now connect and
+Sudo su -> lsblk -fs -> mkdir /mnt/CSE9x
+Mount the directory 
+Cd /mnt/CSE9x 
+
 
 
 
